@@ -5,9 +5,10 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "file://C:/Users/ASUS/Desktop/project/automatB/pfepfeSelenium/src/main/java/Feature/login.feature"
-        ,glue ={"LoginStepDefinition"})
-        //,format = {"pretty","html:test-outout  "})
+@CucumberOptions(features = "C:\\Users\\ASUS\\Desktop\\project\\automatB\\pfepfeSelenium\\src\\main\\java"
+        ,glue ={"LoginStepDefinition"}
+        //,format = {"pretty","html:target/cucumber-reports "}
+        ,dryRun = false)
 
 
 

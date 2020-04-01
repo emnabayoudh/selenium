@@ -1,5 +1,4 @@
 Feature: Login feature
-
   Scenario: Login Test Senario
     Given user is already on Login page
     When title of login page is Page de connexion
