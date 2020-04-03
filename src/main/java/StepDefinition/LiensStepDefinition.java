@@ -16,8 +16,8 @@ public class LiensStepDefinition {
         driver=new ChromeDriver();
         driver.get("https://www.jumia.com.tn");
     }
-    @When("^user cliks on image$")
-    public void user_cliks_on_image(){
+    @When("^user cliccks on image$")
+    public void user_clicks_on_image(){
         driver.findElement(By.xpath("")).click();
     }
     @Then("^user is in a new page for that image$")
@@ -27,8 +27,8 @@ public class LiensStepDefinition {
         Assert.assertEquals("", title);
 
     }
-    @When("^user cliks on Adidas$")
-    public void user_cliks_on_Adidas(){
+    @When("^user clicks on Adidas$")
+    public void user_clicks_on_Adidas(){
         driver.findElement(By.xpath("/adidas/")).click();
 
     }

@@ -16,7 +16,7 @@ public class AideStepDefinition {
         driver = new ChromeDriver();
         driver.get("https://www.jumia.com.tn");
     }
-    @When("^user cliks on aide$")
+    @When("^user clicks on aide$")
     public void user_cliks_on_aide(){
         driver.findElement(By.id("dpdw-help")).click();
     }
@@ -24,10 +24,18 @@ public class AideStepDefinition {
     public void a_list_of_help_menu_is_shown(){
         driver.findElement(By.id("dpdw-help"));
     }
-    @Then("^user cliks on Acheter sur Jumia$")
+    @Then("^user clicks on Acheter sur Jumia$")
     public void user_cliks_on_Acheter_sur_Jumia(){
+    }
+    @Then("^$user is on Comment acheter sur jumia | Jumia Tn page")
+    public void user_is_on_Comment_acheter_sur_jumia_page(){
 
     }
+    @Then("^user is on home page Jumia$")
+    public void user_is_on_home_page_Jumia(){
+
+    }
+
 
 
 }
