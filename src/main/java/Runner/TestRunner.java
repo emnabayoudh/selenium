@@ -7,8 +7,15 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "C:\\Users\\ASUS\\Desktop\\project\\automatB\\pfepfeSelenium\\src\\main\\java"
         ,glue ={"LoginStepDefinition"}
-        //,format = {"pretty","html:target/cucumber-reports "}
-        ,dryRun = false)
+        ,format = {"pretty" ,
+                        "html:target/cucumber-reports/cucumber-pretty",
+                        "json:target/cucumber-reports/cucumberTestReport.json",
+                        "junit:junit_xml/contact.xml",},
+        tags = {"@method2"},
+        dryRun = false,
+        monochrome = true,
+        strict = true
+)
 
 
 
