@@ -5,19 +5,18 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "C:\\Users\\ASUS\\Desktop\\project\\automatB\\pfepfeSelenium\\src\\main\\java"
-        ,glue ={"LoginStepDefinition"}
-        ,format = {"pretty" ,
+@CucumberOptions(
+        features = "C:/Users/ASUS/Desktop/project/automatB/pfepfeSelenium/src/main/java/StepDefinition/AideStepDefinition"
+        , format = {"pretty" ,
                         "html:target/cucumber-reports/cucumber-pretty",
                         "json:target/cucumber-reports/cucumberTestReport.json",
-                        "junit:junit_xml/contact.xml",},
-        tags = {"@method2"},
-        dryRun = false,
+                        "junit:junit_xml/contact.xml"}
+        ,glue ={"StepDefinition/AideStepDefinition.class"},
+        tags ={},
+        dryRun =false,
         monochrome = true,
         strict = true
 )
-
-
 
 public class TestRunner {
 }
