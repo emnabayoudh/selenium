@@ -21,10 +21,25 @@ public class PanierStepDefinition {
         this.driver.manage().window().maximize();
         this.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
     }
+    @Given("^l'utilisateur dans la page jumia.com.tn$")
+    public void utilisateur_dans_la_page_jumia() {
+        driver.get("https://www.jumia.com.tn/");
+    }
+    @When("^le titre de la page est Jumia Tunisie | Vente & Achat en Ligne | Téléphones , Epicerie , Santé & Hygiène$")
+    public void titre_de_la_page () {
+        String title = driver.getTitle();
+        System.out.println(title);
+        Assert.assertEquals("Jumia Tunisie | Vente & Achat en Ligne | Téléphones , Epicerie , Santé & Hygiène", title);
+    }
 
     @Then("^l'utilisateur clique sur Panier$")
     public void utilisateur_clique_Panier() {
         driver.findElement(By.xpath("//*[@id=\"jm\"]/header/section/div/div[2]/a/text()")).click();
+    }
+    @Then("^l'utilisateur dans la page Panier$")
+    public void utilisateur_est_dans_la_page_Panier(){
+        driver.get("https://www.jumia.com.tn/cart/");
+
     }
 
     @Then("^l'utilisateur clique sur COMMENCEZ VOS ACHATS$")
@@ -50,7 +65,7 @@ public class PanierStepDefinition {
         Assert.assertEquals("Panier", title);
     }
     @When("^le titre de la page est Panier$")
-    public void titre_de_la_page_Panier() {
+    public void titre_dAe_la_page_Panier() {
         String title = driver.getTitle();
         System.out.println(title);
         Assert.assertEquals("Panier", title);
